@@ -1,0 +1,30 @@
+// Foundation imported here just as an example.
+//
+// Note this works because we tell sass about the location of Foundation SCSS 
+// in the gulpfile via the `includePaths` option to gulp-sass
+@import 'foundation';
+@include foundation-global-styles;
+
+@import 'variables';
+
+body {
+  background-color: $yellow;
+
+  // Note that all the flex rules are autoprefixed.  Too bad there's no prefixing
+  // that will fix flex in older IE.
+  display: flex;
+  flex-direction: column;
+}
+
+.main, .site-footer {
+  padding: 1rem;
+}
+
+.main {
+  flex: 1;
+}
+
+.site-footer {
+  background-color: $tomato;
+  color: white;
+}
